@@ -22,13 +22,11 @@ tags:
 
 > [Oracle 官网地址](https://www.oracle.com/java/technologies/javase-downloads.html)
 
-![下载好之后上传到服务器](/Users/wangxiaotao/Library/Application Support/typora-user-images/image-20210620175011860.png)
+下载之后上传到服务器
 
 如果感觉麻烦的话，也可以使用wget
 
 > 直接使用下载链接获取到的tar包是有问题的，oracle对链接进行了授权校验：wget https://download.oracle.com/otn/java/jdk/8u291-b10/d7fc238d0cbf4b0dac67be84580cfb4b/jdk-8u291-linux-x64.tar.gz
-
-![解压报错](/Users/wangxiaotao/Library/Application Support/typora-user-images/image-20210620175632886.png)
 
 我们需要在下载链接之前加上 --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" ，如: 
 
