@@ -13,9 +13,9 @@ tags:
 #### 创建安装目录
 
 ```sh
-cd /usr
-mkdir java
-cd java
+[root@iZ8vb7tm9o88h6ioml28vsZ usr]# cd /usr
+[root@iZ8vb7tm9o88h6ioml28vsZ usr]# mkdir java
+[root@iZ8vb7tm9o88h6ioml28vsZ usr]# cd java
 ```
 
 #### 下载jdk 源码包
