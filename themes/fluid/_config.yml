@@ -18,15 +18,15 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/favicon.png
+favicon: https://github.com/wxt1471520488/images/blob/main/hexo/tab.jpg
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: /img/favicon.png
+apple_touch_icon: https://github.com/wxt1471520488/images/blob/main/hexo/tab.jpg
 
 # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 # Title separator in browser tab, eg: article - site
-tab_title_separator: " ❤ "
+tab_title_separator: " - "
 
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 # Force all links to be HTTPS (applicable to HTTP mixed error)
@@ -87,11 +87,11 @@ fun_features:
 
     # 游标字符
     # Cursor character
-    cursorChar: "_"
+    cursorChar: "❤"
 
     # 是否循环播放效果
     # If true, loop animation
-    loop: true
+    loop: false
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -309,7 +309,7 @@ navbar:
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
-    - { key: "darkCuisine", link: "/darkCuisine/", icon: "iconfont icon-link-fill" }
+    - { key: "黑暗料理", link: "/darkCuisine/", icon: "iconfont icon-food-fill" }
 
 # 搜索功能，基于 hexo-generator-search 插件，若已安装其他搜索插件请关闭此功能，以避免生成多余的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -432,7 +432,8 @@ index:
 
     # 为空则按 hexo config.subtitle 显示
     # If empty, text based on `subtitle` in hexo config
-    text: "知道的越多，不知道的越多"
+    text: "知道的越多，不知道的越多！
+go go go ..."
 
     # 通过 API 接口作为首页副标题的内容，必须返回的是 JSON 格式，如果请求失败则按 text 字段显示，该功能必须先开启 typing 打字机功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
@@ -485,7 +486,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/bg.jpeg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/info.jpeg
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -540,7 +541,7 @@ post:
   # 在文章开头显示文章更新时间，该时间默认是 md 文件更新时间，可通过 front-matter 中 `updated` 手动指定（和 date 一样格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
-    enable: false
+    enable: true
 
     # 描述文字
     # Descriptive text before date
@@ -818,7 +819,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/bg.jpeg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/sq.jpeg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
@@ -836,7 +837,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/bg.jpeg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/about.jpeg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -882,7 +883,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/bg.jepg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/fr.jepg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
