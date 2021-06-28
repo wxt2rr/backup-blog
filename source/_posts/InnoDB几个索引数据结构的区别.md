@@ -1,4 +1,14 @@
-﻿# 索引的本质
+---
+title: InnoDB几个索引数据结构的区别
+date: 2020-09-10 12:25:00
+summary: InnoDB几个索引数据结构的区别
+categories: Mysql
+tags:
+  - InnoDB索引
+  - Mysql
+  - 数据结构
+---
+# 索引的本质
 
 索引是帮助Mysql高效获取数据的==排好序==的==数据结构==
 
