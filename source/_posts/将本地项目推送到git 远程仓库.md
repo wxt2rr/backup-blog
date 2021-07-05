@@ -1,4 +1,5 @@
 ---
+hide: false
 title: 将本地项目推送到git 远程仓库
 date: 2020-05-11 12:30:00
 categories: GIT
