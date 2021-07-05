@@ -1,4 +1,5 @@
 ---
+hide: false
 title: 使用ssh登录远程服务器报错
 date: 2021-06-17 08:30:24
 comments: true
