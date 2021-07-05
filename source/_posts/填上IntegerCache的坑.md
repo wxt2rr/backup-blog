@@ -1,4 +1,5 @@
 ---
+hide: false
 title: 填上IntegerCache的坑
 date: 2017-10-16 21:01:24
 comments: true
