@@ -1,4 +1,5 @@
 ---
+hide: false
 title: Cent os 安装jdk
 date: 2020-09-07 09:25:00
 summary: 整理一下cent os安装jdk的方式
