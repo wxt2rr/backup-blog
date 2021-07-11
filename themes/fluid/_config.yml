@@ -248,7 +248,7 @@ web_analytics:  # 网页访问统计
   leancloud:
     app_id: MN9k0rgUbdCatHWxVIY3zmL6-gzGzoHsz
     app_key: Rbb81eTDeJCiLF562bT9R9Yo
-    # REST API 服务器地址，国际版不填
+    #  REST API 服务器地址，国际版不填
     # Only the Chinese mainland users need to set
     server_url: https://mn9k0rgu.lc-cn-n1-shared.com
 
