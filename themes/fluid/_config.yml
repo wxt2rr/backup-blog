@@ -400,11 +400,11 @@ footer:
     # ICP证号
     icp_text: 冀ICP备2021013174号-2
     # 公安备案号，不填则只显示ICP
-    police_text:
+    police_text: 京公网安备 11010502045173号
     # 公安备案的编号，用于URL跳转查询
-    police_code: 
+    police_code: 11010502045173
     # 公安备案的图片. 为空时不显示备案图片
-    police_icon: 
+    police_icon: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/beian.png
 
 
 #---------------------------
