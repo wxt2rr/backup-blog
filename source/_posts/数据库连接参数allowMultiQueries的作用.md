@@ -11,7 +11,7 @@ tags:
 ---
 
 >~~~ mysql
-><delete id="delete">
+> <delete id="delete">
 >        <foreach collection="list" item="item" index="index" separator=";" >
 >            delete from xxxx_table
 >            where gid = #{item.gId} and pid = #{item.pId}
