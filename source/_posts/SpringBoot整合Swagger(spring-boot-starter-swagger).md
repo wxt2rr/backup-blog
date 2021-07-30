@@ -1,5 +1,14 @@
-﻿>
-﻿>
+---
+hide: false
+title: SpringBoot整合Swagger(spring-boot-starter-swagger)
+date: 2020-09-15 09:25:00
+summary: SpringBoot整合Swagger(spring-boot-starter-swagger)
+categories: 接口文档服务
+tags:
+  - Swagger
+  - springboot
+  - 接口文档
+---
 ﻿>我们在使用swagger时，需要配置config配置类，spring-boot-starter-swagger则利用Spring Boot的自动化配置特性来实现快速的将swagger2引入spring boot应用来生成API文档，简化原生使用swagger2的整合代码。
 
 * [GitHub地址](https://github.com/SpringForAll/spring-boot-starter-swagger)
