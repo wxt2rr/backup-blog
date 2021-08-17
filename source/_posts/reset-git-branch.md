@@ -1,3 +1,14 @@
+---
+hide: false
+title: 一键重置git分支脚本
+date: 2021-08-02 09:25:00
+summary: 一键重置git分支脚本
+categories: Shell
+tags:
+  - shell
+  - git branch
+---
+
 > 脚本备份，写了一个一键重置某分支的脚本，提高工作效率，V1版本，目前使用未有问题
 
 ~~~sh
