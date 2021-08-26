@@ -7,6 +7,7 @@ categories: 软件
 tags:
   - 破解软件
 ---
+> 软件下载地址 ：链接：https://pan.baidu.com/s/100omUwKALn63KugkmDdWUQ 
 #### 1.解压压缩包
 ![成功下载CAD2020压缩包后鼠标右击解压到文件](https://img-blog.csdnimg.cn/79e8577a3fe54a16bb8720370fe9f543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBA5ZGA77yB6IOW5q275oiR566X5LqG,size_14,color_FFFFFF,t_70,g_se,x_16)
 #### 2.运行安装CAD2020
