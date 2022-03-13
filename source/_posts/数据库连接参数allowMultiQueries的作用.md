@@ -9,7 +9,8 @@ tags:
   - 数据库
   - 日常踩坑
 ---
-
+如上，今天有个同事写了一条sql，先不管sql的业务逻辑和可用性，在本地执行没有问题，部署到QA环境报错，原因是本地数据库连接时设置了allowMultiQueries=true，但是QA环境没有设置，那默认是false。记录一下 allowMultiQueries 参数的作用
+<!--more-->
 >~~~ mysql
 > <delete id="delete">
 >        <foreach collection="list" item="item" index="index" separator=";" >
