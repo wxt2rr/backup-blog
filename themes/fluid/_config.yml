@@ -413,7 +413,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/home.png
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/home_head_1.png
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -485,7 +485,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/post_head.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_post_head.jpg
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -776,7 +776,7 @@ cusdis:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/guidang_head.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_guidang_head.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -788,7 +788,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/fenlei_head.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_guidang_head.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -818,7 +818,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/biaoqian_head.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_guidang_head.jpg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
@@ -836,7 +836,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/friend_head.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_my_head.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -896,7 +896,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/friend_head_2.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_friend_head.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
