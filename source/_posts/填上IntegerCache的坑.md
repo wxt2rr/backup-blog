@@ -11,7 +11,8 @@ tags:
     - Integer
     - IntegerCache
 ---
-
+初入职场时，确实被IntegerCache坑过一次，如下代码，本地跑程序都没问题，一到线上就不行，原因就是IntegerCache的问题，比较两个Integer时，本地数据少，数值也小，正好都是true，正式数据多，可能就因为IntegerCache的问题导致该是true的为false了，导致程序的执行出错。
+<!--more-->
 > 初入职场时，确实被IntegerCache坑过一次，如下代码，本地跑程序都没问题，一到线上就不行，原因就是IntegerCache的问题，比较两个Integer时，本地数据少，数值也小，正好都是true，正式数据多，可能就因为IntegerCache的问题导致该是true的为false了，导致程序的执行出错。
   ```java
 //......
