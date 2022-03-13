@@ -485,7 +485,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_post_head.jpg
+  banner_img: https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/hexo_post_head.png
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -576,7 +576,8 @@ post:
   # Custom content at the bottom of the post page (located above the footer)
   custom:
     enable: true
-    content: '<img src="https://octodex.github.com/images/jetpacktocat.png" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">'
+    content: '我的联系方式：
+微信：<img src="https://github.com/wxt1471520488/images/blob/main/my_info/wx.jpg" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">'
 
   # 文章图片可点击放大
   # Zoom feature of images
