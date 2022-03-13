@@ -9,7 +9,8 @@ categories:
 tags: 
     - ssh
 ---
-
+今天使用ssh远程链接远程服务器时，突然报错了，记录一下原因
+<!--more-->
 今天使用ssh远程链接远程服务器时，突然报错了，报错如下图
 ![报错信息](https://img-blog.csdnimg.cn/20210605093631587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDI0Mzg5NA==,size_16,color_FFFFFF,t_70)
 
