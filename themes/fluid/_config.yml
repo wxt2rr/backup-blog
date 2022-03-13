@@ -575,7 +575,7 @@ post:
   # 文章底部自定义区域（位于 footer 上方），支持 HTML，可插入赞赏码、公众号这类内容内容
   # Custom content at the bottom of the post page (located above the footer)
   custom:
-    enable: true
+    enable: false
     content: '我的联系方式：
 <img src="https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/my_info/wx.jpg" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;"><img src="https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/my_info/qq.jpg" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">'
 
