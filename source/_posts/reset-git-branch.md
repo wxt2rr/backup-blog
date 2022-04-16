@@ -1,6 +1,10 @@
 ---
-hide: false title: 一键重置git分支脚本 date: 2021-08-02 09:25:00 summary: 一键重置git分支脚本 categories: Shell tags:
-
+hide: false
+title: 一键重置git分支脚本
+date: 2021-08-02 09:25:00
+summary: 一键重置git分支脚本
+categories: Shell
+tags:
 - shell
 - git branch
 

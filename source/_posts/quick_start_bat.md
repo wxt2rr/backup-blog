@@ -1,12 +1,4 @@
 ---
-<<<<<<< HEAD
-hide: false title: windows 批量启动软件脚本 date: 2020-09-08 10:25:00 summary: windows 批量启动软件脚本 categories: windows tags:
-
-- bat
-- 脚本
-- 便捷�?�?
-
-=======
 hide: false
 title: windows 批量启动软件脚本
 date: 2020-09-08 10:25:00
@@ -16,7 +8,6 @@ tags:
   - bat
   - 脚本
   - 便捷开发
->>>>>>> 6c17406bb8832309feff17463165b98c13ab74c7
 ---
 > 公司预备使用的是windows系统主机办公，每天早上来了第一件事就是开机，启动软件，启动软件，启动...，个人不太喜欢使用软件的开机自启动，于是有了这个脚本。
 <!--more-->

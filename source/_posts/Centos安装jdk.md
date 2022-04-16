@@ -6,7 +6,6 @@ categories: CentOs
 tags:
  - jdk
  - centos
-
 ---
 整理一下cent os安装jdk的方式
 <!--more-->

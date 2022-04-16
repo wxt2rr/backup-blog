@@ -1,17 +1,19 @@
 ---
-hide: false title: cad破解 date: 2020-09-15 09:25:00 summary: cad破解 categories: 软件 tags:
-
+hide: false
+title: cad破解
+date: 2020-09-15 09:25:00
+summary: cad破解
+categories: 软件
+tags:
 - 破解软件
 
 ---
-<<<<<<< HEAD
-> 软件下载地址 ：链接：https://pan.baidu.com/s/100omUwKALn63KugkmDdWUQ
 
-=======
 由于对象是工程专业，需要用到cad软件，奈何公司也不给补助购买正版，那咱只能使用破解版了，整理了一下cad2020的破解步骤，其它版本也基本类似，做个备份
 <!--more-->
+
 > 软件下载地址 ：链接：https://pan.baidu.com/s/100omUwKALn63KugkmDdWUQ 
->>>>>>> 6c17406bb8832309feff17463165b98c13ab74c7
+>
 #### 1.解压压缩包
 
 ![成功下载CAD2020压缩包后鼠标右击解压到文件](https://img-blog.csdnimg.cn/79e8577a3fe54a16bb8720370fe9f543.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_Q1NETiBA5ZGA77yB6IOW5q275oiR566X5LqG,size_14,color_FFFFFF,t_70,g_se,x_16)

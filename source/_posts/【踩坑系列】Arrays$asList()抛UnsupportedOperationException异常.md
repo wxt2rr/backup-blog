@@ -1,11 +1,13 @@
 ---
-hide: false title: 【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常 date: 2020-11-04 22:25:00 summary:
-【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常 categories: 踩坑系列 tags:
-
+hide: false
+title: 【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常
+date: 2020-11-04 22:25:00
+summary:【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常
+categories: 踩坑系列
+tags:
 - Arrays
 - 视图
 - 踩坑
-
 ---
 > 今天写代码时遇到一个很奇怪的问题，我很主观的利用Arrays.asList()方法返回一个List，然后对该List进行了add()方法的调用，结果竟然抛了异常。将问题原因记录一下。
 <!--more-->
