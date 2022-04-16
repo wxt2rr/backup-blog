@@ -10,4 +10,6 @@ tags:
  - AOP
 ---
 
-![image](https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/JDK动态代理/9cbce7c6-354a-464f-ac61-ca13dbe5cce8.png)
+aaa
+
+aaa
