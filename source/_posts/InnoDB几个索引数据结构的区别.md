@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 hide: false title: InnoDB几个索引数据结构的区别 date: 2020-09-10 12:25:00 summary: InnoDB几个索引数据结构的区别 categories: Mysql tags:
 
 - InnoDB索引
@@ -7,6 +8,20 @@ hide: false title: InnoDB几个索引数据结构的区别 date: 2020-09-10 12:2
 
 ---
 
+=======
+hide: false
+title: InnoDB的索引实现
+date: 2020-09-10 12:25:00
+summary: InnoDB几个索引数据结构的区别
+categories: Mysql
+tags:
+  - InnoDB索引
+  - Mysql
+  - 数据结构
+---
+我们知道，MySQL中InnoDB执行引擎的索引实现底层数据结构是B+树，为什么选择B+树，而不选择其它数据，如Hash,二叉树等，我们今天探讨下这个问题
+<!--more-->
+>>>>>>> 6c17406bb8832309feff17463165b98c13ab74c7
 # 索引的本质
 
 索引是帮助Mysql高效获取数据的==排好序==的==数据结构==

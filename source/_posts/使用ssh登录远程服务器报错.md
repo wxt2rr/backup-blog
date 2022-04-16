@@ -3,8 +3,8 @@ hide: false title: 使用ssh登录远程服务器报错 date: 2021-06-17 08:30:2
 - SSH tags:
 - ssh
 ---
-
-今天使用ssh远程链接远程服务器时，突然报错了，报错如下图
+今天使用ssh远程链接远程服务器时，突然报错了，记录一下原因
+<!--more-->
 ![报错信息](https://img-blog.csdnimg.cn/20210605093631587.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDI0Mzg5NA==,size_16,color_FFFFFF,t_70)
 
 原因是我的远程服务器进行了重置，导致本地记录的验证信息过时了。
