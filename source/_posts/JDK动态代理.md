@@ -385,4 +385,5 @@ public final class $Proxy0 extends Proxy implements Father {
 
 ## 总结
 
-![image](https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/JDK动态代理/cd920125-6864-4d4c-a490-c216177facaf.png)
+![image](https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/JDK动态代理/020691d7-f74f-471b-8249-3e02b5286431.png)
+因为JDK动态代理生成的代理对象默认继承了Proxy类，又因为Java中是单继承多实现，所以导致了JDK动态代理无法代理实现类，只能代理接口；而且我们通过观察Proxy类，维护了InvocationHandler h成员变量并提供了相应的方法，然后通过子类对InvocationHandler进行透传，Proxy对其进行方法执行，其实理论上只要我们把InvocationHandler提出来，不由Proxy进行维护，也就不需要继承Proxy类，就可以对实现类进行代理，可能作者基于面向接口开发的实际场景，以及抽象思维才这么进行设计的吧。
