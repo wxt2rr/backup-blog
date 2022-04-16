@@ -8,19 +8,24 @@
   height: $navbar-height
   background: var(--color-card)
   box-shadow: $boxshadow-card
+
   &.auto
     transition: opacity .4s ease
     visibility: hidden
+
     &.show
       opacity: 1 !important
       visibility: visible
+
   .container
     margin-left: $gap
     margin-right: $gap
+
   #wrapper
     height: 100%
     disable-user-select()
-    .nav-main,.nav-sub
+
+    .nav-main, .nav-sub
       display: flex
       flex-wrap: nowrap
       justify-content: space-between
@@ -28,9 +33,12 @@
 
     .nav-main
       trans()
-      // transform: translateY(0 - $navbar-height)
+
+    // transform: translateY(0 - $navbar-height)
+
     &.sub .nav-main
       transform: translateY(0 - 1 * $navbar-height)
+
     .nav-sub
       trans()
       opacity: 0
@@ -40,8 +48,10 @@
       @media screen and (min-width: $device-2k)
         max-width: 55vw
         margin: auto
+
     &.sub .nav-sub
       opacity: 1
+
     .title
       position: relative
       color: var(--color-text)
@@ -52,15 +62,17 @@
       txt-ellipsis()
       flex-shrink: 0
       line-height: $navbar-height
-      padding: 0 $gap*1.5
+      padding: 0 $gap* 1.5
       font-size: $fontsize-h3
       font-family: $fontfamily-logo
+
       img
         height: $navbar-height
 
   .nav-sub
     max-width: $layout-width
     margin: auto
+
     .title
       font-weight: bold
       font-family: $fontfamily
@@ -70,17 +82,18 @@
       flex-shrink: 1
 
 
-
   .switcher
     display: none
     line-height: $navbar-height
+
     .s-toc
       display: none
     align-items: center
     @media screen and (max-width: $device-tablet)
       .s-toc
         display: flex
-    >li
+
+    > li
       height: $navbar-height - $gap
       trans()
       margin: 2px
@@ -88,7 +101,8 @@
       @media screen and (max-width: $device-mobile)
         margin: 0 1px
         height: $height
-      >a
+
+      > a
         display: flex
         justify-content: center
         align-items: center
@@ -99,9 +113,11 @@
         border: none
         trans()
         color: $color-theme
+
         &:hover
           border: none
-        &.active,&:active
+
+        &.active, &:active
           border: none
           background: var(--color-site-bg)
         @media screen and (max-width: $device-mobile)
@@ -122,6 +138,7 @@
       input
         &::placeholder
           opacity: 0
+
       &:hover
         input
           &::placeholder
@@ -136,6 +153,7 @@
       input
         &::placeholder
           opacity: 1
+
       min-width: 0
 
     .form
@@ -151,6 +169,7 @@
       color: var(--color-meta)
       @media screen and (max-width: $device-mobile)
         display: none
+
     .input
       display: block
       padding-top: $gap * 0.5
@@ -173,7 +192,7 @@
         background: var(--color-block)
         padding-left: $gap * 0.5
         border: none
-        &:hover,&:focus
+        &:hover, &:focus
           border: none
 
 
@@ -185,38 +204,45 @@
       position: absolute
       background: lighten($color-card, 5)
       trans()
+
       .input
         border-radius: $navbar-height * 0.5
         margin-left: $gap
         padding-left: $gap
+
     &.z_search-open
       .m_search
         width: 100%
+
         .input
           width: "calc(100% - %s)" % (3 * $gap + 2 * $iconW)
 
 ul.m-pc
-  >li>a
+  > li > a
     color: inherit
     border-bottom: 2px solid transparent
-    &:active,&.active
+
+    &:active, &.active
       border-bottom: 2px solid $color-theme
-ul.m-pc,ul.list-v
+
+ul.m-pc, ul.list-v
   li:hover
-    >ul.list-v
+    > ul.list-v
       display: block
 
 
 ul.nav-list-h
   display: flex
   align-items: stretch
-  &>li
+
+  & > li
     position: relative
     justify-content: center
     height: 100%
     line-height: 2.4
     border-radius: $border-button
-    >a
+
+    > a
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
       font-weight: 600
@@ -224,6 +250,7 @@ ul.nav-list-h
 ul.list-v
   z-index: 1
   display: none
+
   &.show
     display: block
   position: absolute
@@ -232,28 +259,35 @@ ul.list-v
   margin-top: -2px - $border-card * 0.5
   border-radius: $border-card * 0.5
   padding: $gap * 0.5 0
+
   hr
     margin-top: $gap * 0.5
     margin-bottom: $gap * 0.5
-  >li
+
+  > li
     white-space: nowrap
     word-break: keep-all
+
     &.header
       font-size: $fontsize-footnote
       font-weight: bold
       line-height: 2em
       color: var(--color-meta)
       margin: $gap * 0.5 $gap $gap * 0.25
+
       i
         margin-right: 8px
+
     ul
       margin-left: 0
       display: none
       margin-top: 0 - 32px - $gap * 0.5
+
   .aplayer-container
     min-height: 64px
     padding: $gap - 10px $gap
-  >li>a
+
+  > li > a
     trans()
     display: block
     color: var(--color-list)
@@ -266,32 +300,40 @@ ul.list-v
     text-overflow: ellipsis
     margin: 0 4px
     border-radius: 4px
-    >i
+
+    > i
       margin-right: 8px
-    &:active,&.active
+
+    &:active, &.active
       list_active()
+
     &:hover
       list_hover()
 
 .l_header
   .menu
-    >ul>li>a
+    > ul > li > a
       display: block
       padding: 0 8px
-      >i
+
+      > i
         margin-right: 4px
 
-.l_header ul.nav-list-h>li
+.l_header ul.nav-list-h > li
   color: var(--color-list)
   line-height: $navbar-height
-  >a
+
+  > a
     max-height: $navbar-height
     overflow: hidden
     color: inherit
-    &:active,&.active
+
+    &:active, &.active
       color: $color-theme
-  &:hover>a
+
+  &:hover > a
     color: var(--color-list-hl)
+
   i.music
     animation: rotate-effect 1.5s linear infinite
     @keyframes rotate-effect
@@ -309,6 +351,7 @@ ul.list-v
 
 .menu-phone li ul.list-v
   right: "calc(100% - 0.5 * %s)" % $gap
+
   ul
     right: "calc(100% - 0.5 * %s)" % $gap
 
@@ -321,6 +364,7 @@ ul.list-v
     .menu
       flex: 1 1 auto
       margin: 0 $gap 0 0
+
       .list-v ul
         left: "calc(100% - 0.5 * %s)" % $gap
   else
@@ -331,6 +375,7 @@ ul.list-v
       order: 1
     .menu li ul.list-v
       right: 0
+
       ul
         right: "calc(100% - 0.5 * %s)" % $gap
 
@@ -339,6 +384,7 @@ ul.list-v
   display: none
   margin-top: $gap
   right: $gap * 0.5
+
   ul
     right: "calc(100% - 0.5 * %s)" % $gap
   @media screen and (max-width: $device-mobile)
@@ -350,6 +396,7 @@ ul.list-v
   .l_header
     trans(0.5s)
     transform: translateY(-2 * $navbar-height)
+
     &.show
       transform: translateY(0)
 
@@ -371,22 +418,27 @@ ul.list-v
     .container
       margin-left: 0
       margin-right: 0
+
     #wrapper
       .nav-main
         .title
           padding-left: $gap
           padding-right: $gap
+
       .nav-sub
         width: 100%
+
         .title
           overflow-y: scroll
           margin-top: 2px
           padding: 8px $gap
+
       .switcher
         display: flex
         margin-right: $gap * 0.5
+
     .menu
-      display:none
+      display: none
 
 @media screen and (max-width: $device-mobile)
   .list-v

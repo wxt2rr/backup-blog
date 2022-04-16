@@ -1,18 +1,11 @@
 ---
-hide: false
-title: 填上IntegerCache的坑
-date: 2017-10-16 21:01:24
-comments: true
-toc: true
-categories:
-    - Java基础
-tags: 
-    - Java
-    - Integer
-    - IntegerCache
+hide: false title: 填上IntegerCache的坑 date: 2017-10-16 21:01:24 comments: true toc: true categories:
+- Java基础 tags:
+- Java - Integer - IntegerCache
 ---
 
 > 初入职场时，确实被IntegerCache坑过一次，如下代码，本地跑程序都没问题，一到线上就不行，原因就是IntegerCache的问题，比较两个Integer时，本地数据少，数值也小，正好都是true，正式数据多，可能就因为IntegerCache的问题导致该是true的为false了，导致程序的执行出错。
+
   ```java
 //......
 Integer a = 200;
@@ -54,7 +47,8 @@ private static class IntegerCache {
 }
 ```
 
-可以看到，Integer内部维护着IntegerCache的一个内部类，我们分析一下这个IntegerCache,它维护着两个静态int常量，和一个静态的Integer数组，然后静态块里初始化了high值和cache数组，并且将low到high中的数值add到了cache中，并且可以看到low值是常量-128,high值我们是可以通过配置文件配置的，也就是说我们可以根据jvm自行修改IntegerCache的阈值(最大值)，只是看IntegerCache的话发现很简单，接下来我们结合Integer的几个方法在分析一下：
+可以看到，Integer内部维护着IntegerCache的一个内部类，我们分析一下这个IntegerCache,它维护着两个静态int常量，和一个静态的Integer数组，然后静态块里初始化了high值和cache数组，并且将low到high中的数值add到了cache中，并且可以看到low值是常量-128,high值我们是可以通过配置文件配置的，也就是说我们可以根据jvm自行修改IntegerCache的阈值(
+最大值)，只是看IntegerCache的话发现很简单，接下来我们结合Integer的几个方法在分析一下：
 
 Integer的构造方法：
 
@@ -142,7 +136,8 @@ public static int parseInt(String s, int radix) throws NumberFormatException {
 }
 ```
 
-可以看到，通过Integer的构造方法创建Integer对象时，并不会跟IntegerCache扯上关系，也就是说创建多少个都是新对象，比较的话都是false，因为他们的地址值都不一样；parseInt方法返回的是int基本类型，所以跟IntegerCache也没有关系；我们再来看一下valueOf方法，在给定的IntegerCache的阈值范围内，Integer对象都是从cache数组中取到的，而内部类都是懒加载，在使用时加载内部类，并且创建阈值之内的所有Integer对象并存入cache中，cache是静态常量数组，由常量池维护着，cache被所有的Integer对象共享，所以只要是比较cache阈值之内的两个Integer的结果都是true，因为本身他们就是同一个对象。(ps:Integer a = 1; 默认调用的是valueOf方法)。
+可以看到，通过Integer的构造方法创建Integer对象时，并不会跟IntegerCache扯上关系，也就是说创建多少个都是新对象，比较的话都是false，因为他们的地址值都不一样；parseInt方法返回的是int基本类型，所以跟IntegerCache也没有关系；我们再来看一下valueOf方法，在给定的IntegerCache的阈值范围内，Integer对象都是从cache数组中取到的，而内部类都是懒加载，在使用时加载内部类，并且创建阈值之内的所有Integer对象并存入cache中，cache是静态常量数组，由常量池维护着，cache被所有的Integer对象共享，所以只要是比较cache阈值之内的两个Integer的结果都是true，因为本身他们就是同一个对象。(
+ps:Integer a = 1; 默认调用的是valueOf方法)。
 
 到此为止，我们应该对IntegerCache有了一定的了解，那么做点习题巩固一下：
 
@@ -173,16 +168,10 @@ System.out.println(String.format("8:%s",x == y));// 8
 
 结果：
 
-1:true
- 2:true
- 3:false
- 4:false
- 5:true
- 6:false
- 7:false
- 8:false
+1:true 2:true 3:false 4:false 5:true 6:false 7:false 8:false
 
-如果你都做对了，那么你对IntegerCache已经算是过关了，^_^！！！这里在说一下x = Integer.parseInt("127")和y = Integer.parseInt("127")这两个比较，因为parstInt()方法返回的是int基本类型,自动装箱，就变成了Integer x = 127;调用valueOf方法,所以判断结果和直接调用valueOf方法是一样的。
+如果你都做对了，那么你对IntegerCache已经算是过关了，^_^！！！这里在说一下x = Integer.parseInt("127")和y = Integer.parseInt("127")这两个比较，因为parstInt()
+方法返回的是int基本类型,自动装箱，就变成了Integer x = 127;调用valueOf方法,所以判断结果和直接调用valueOf方法是一样的。
 
 续：下边输出结果是什么
 

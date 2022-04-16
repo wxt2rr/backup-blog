@@ -7,7 +7,7 @@ const note = (args, content) => {
     args = ['default'];
   }
   return `<div class="note note-${args.join(' ')}">
-            ${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
+            ${hexo.render.renderSync({text: content, engine: 'markdown'}).split('\n').join('')}
           </div>`;
 };
 
@@ -16,4 +16,4 @@ const note = (args, content) => {
   text
   {% endnote %}
  */
-hexo.extend.tag.register('note', note, { ends: true });
+hexo.extend.tag.register('note', note, {ends: true});

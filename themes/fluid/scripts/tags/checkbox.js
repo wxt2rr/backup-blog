@@ -23,5 +23,5 @@ const checkbox = (args) => {
 };
 
 // {% cb text, checked?, inline? %}
-hexo.extend.tag.register('checkbox', checkbox, { ends: false });
-hexo.extend.tag.register('cb', checkbox, { ends: false });
+hexo.extend.tag.register('checkbox', checkbox, {ends: false});
+hexo.extend.tag.register('cb', checkbox, {ends: false});

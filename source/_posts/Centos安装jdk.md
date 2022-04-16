@@ -1,12 +1,12 @@
 ---
 hide: false
-title: Cent os 安装jdk
-date: 2020-09-07 09:25:00
-summary: 整理一下cent os安装jdk的方式
-categories: CentOs
+title: Cent os 安装jdk date: 2020-09-07 09:25:00 
+summary: 整理一下cent os安装jdk的方式 
+categories: CentOs 
 tags:
-  - jdk
-  - centos
+ - jdk
+ - centos
+
 ---
 
 ### 手动安装
@@ -29,7 +29,8 @@ tags:
 
 > 直接使用下载链接获取到的tar包是有问题的，oracle对链接进行了授权校验：wget https://download.oracle.com/otn/java/jdk/8u291-b10/d7fc238d0cbf4b0dac67be84580cfb4b/jdk-8u291-linux-x64.tar.gz
 
-我们需要在下载链接之前加上 --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" ，如: 
+我们需要在下载链接之前加上 --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F;
+oraclelicense=accept-securebackup-cookie" ，如:
 
 ```sh
 wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "https://download.oracle.com/otn/java/jdk/8u291-b10/d7fc238d0cbf4b0dac67be84580cfb4b/jdk-8u291-linux-x64.tar.gz"

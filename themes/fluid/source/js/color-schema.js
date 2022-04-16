@@ -3,7 +3,7 @@
 /**
  * Modify by https://blog.skk.moe/post/hello-darkmode-my-old-friend/
  */
-(function(window, document) {
+(function (window, document) {
   var rootElement = document.documentElement;
   var colorSchemaStorageKey = 'Fluid_Color_Scheme';
   var colorSchemaMediaQueryKey = '--color-mode';
@@ -15,13 +15,15 @@
   function setLS(k, v) {
     try {
       localStorage.setItem(k, v);
-    } catch (e) {}
+    } catch (e) {
+    }
   }
 
   function removeLS(k) {
     try {
       localStorage.removeItem(k);
-    } catch (e) {}
+    } catch (e) {
+    }
   }
 
   function getLS(k) {
@@ -56,7 +58,7 @@
   }
 
   var validColorSchemaKeys = {
-    dark : true,
+    dark: true,
     light: true
   };
 
@@ -106,7 +108,7 @@
   }
 
   var invertColorSchemaObj = {
-    dark : 'light',
+    dark: 'light',
     light: 'dark'
   };
 
@@ -155,7 +157,7 @@
         );
       } else {
         // 如果图标不存在则说明图标还没加载出来，等到页面全部加载再尝试切换
-        Fluid.utils.waitElementLoaded(colorToggleIconName, function() {
+        Fluid.utils.waitElementLoaded(colorToggleIconName, function () {
           var iconElement = document.getElementById(colorToggleIconName);
           if (iconElement) {
             iconElement.setAttribute(
@@ -191,7 +193,7 @@
         theme = window.UtterancesThemeDark;
       }
       const message = {
-        type : 'set-theme',
+        type: 'set-theme',
         theme: theme
       };
       utterances.contentWindow.postMessage(message, 'https://utteranc.es');
@@ -201,7 +203,7 @@
   // 当页面加载时，将显示模式设置为 localStorage 中自定义的值（如果有的话）
   applyCustomColorSchemaSettings();
 
-  Fluid.utils.waitElementLoaded(colorToggleButtonName, function() {
+  Fluid.utils.waitElementLoaded(colorToggleButtonName, function () {
     applyCustomColorSchemaSettings();
     var button = document.getElementById(colorToggleButtonName);
     if (button) {

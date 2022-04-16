@@ -7,6 +7,7 @@
     color: var(--color-meta)
     margin: 0
     font-weight: 600
+
     .prev
       text-align: left
       border-top-right-radius: 32px
@@ -24,11 +25,13 @@
       color: var(--color-meta)
       padding: $gap
       border-radius: $border-card
+
       &:hover
         color: $color-hover
 
 
   // 文章中
+
   .article
     .prev-next
       width: 100%
@@ -36,31 +39,40 @@
       justify-content: space-between
       align-content: flex-start
       margin-top: $gap * 0.5
-      >a
+
+      > a
         width: 100%
         padding: $gap * 0.5
         color: var(--color-meta)
         background: var(--color-block)
         border-radius: $border-codeblock
+
         &:hover
           background: bgcolor($color-hover)
+
           p.title
             color: $color-hover
+
         p
           margin: $gap * 0.5 .5rem
+
         p.title
           font-weight: 600
           font-size: $fontsize-h5
-          >i
+
+          > i
             width: 1rem
+
         p.content
           font-size: $fontsize-meta
           font-weight: 400
           text-align: justify
           word-break: break-all
+
         &:only-child
           margin-left: 0
           margin-right: 0
+
       .prev
         p.title
           text-align: left

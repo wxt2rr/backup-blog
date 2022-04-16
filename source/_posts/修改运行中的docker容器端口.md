@@ -1,11 +1,8 @@
 ---
-hide: false
-title: 修改已经运行的docker容器的端口
-date: 2021-06-29 22:25:00
-summary: 修改docker容器端口映射
-categories: Docker
-tags:
-  - docker容器
+hide: false title: 修改已经运行的docker容器的端口 date: 2021-06-29 22:25:00 summary: 修改docker容器端口映射 categories: Docker tags:
+
+- docker容器
+
 ---
 
 > 一开始博客没有加Nginx，我把docker容器直接映射到了宿主机的80端口，后来加入了Nginx来管理静态资源、ssl等，这时候80端口被占用了，所以需要修改正在运行的docker容器映射的宿主机的端口。
@@ -155,7 +152,8 @@ drwx-----x 4 root root 4096 Jun 29 22:24 cf57f70841c097654c76787478a0648722ac8c9
 }
 ```
 
-打开之后是个json，我们格式化，然后找到 **PortBindings** 这个key，以我的配置为例，其中4000/tcp对应的是docker容器内部的端口，HostPort对应的是映射到宿主机的端口。这时候我们修改宿主机的端口为自己想修改的端口，然后重启docker服务，再启动容器服务就可以了。
+打开之后是个json，我们格式化，然后找到 **PortBindings**
+这个key，以我的配置为例，其中4000/tcp对应的是docker容器内部的端口，HostPort对应的是映射到宿主机的端口。这时候我们修改宿主机的端口为自己想修改的端口，然后重启docker服务，再启动容器服务就可以了。
 
 ```sh
 # 重启docker服务

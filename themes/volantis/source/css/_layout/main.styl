@@ -1,16 +1,20 @@
 #safearea
   margin: $gap $gap 0
+
 #l_body
   position: relative
   if hexo-config('custom_css.font_smoothing') == true
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+
   div.loading
     margin: $gap 0
     width: 100%
     display: block
-    &,p
+
+    &, p
       text-align: center
+
   #s-top
     trans(0.6s)
     z-index: 9
@@ -19,15 +23,17 @@
     height: 48px
     line-height: 48px
     border-radius: 100%
-    bottom: $gap*2
-    right: $gap*2
+    bottom: $gap* 2
+    right: $gap* 2
     transform: translateY(100px) scale(0)
     transform-origin: bottom
     color: var(--color-text)
     @media screen and (max-width: $device-tablet)
       right: $gap
+
     &.show
       transform: translateY(0) scale(1)
+
       &.hl
         background: $color-theme
         color: $color-inner
@@ -39,6 +45,7 @@
         background: $color-theme
         color: white
         box-shadow: $boxshadow-card-float
+
         &.hl
           box-shadow: $boxshadow-card-float
 
@@ -47,6 +54,7 @@
   @media screen and (max-width: $device-tablet)
     width: 100%
   padding-right: $gap
+
   &.no_sidebar
     width: 100%
     padding-right: 0
@@ -54,9 +62,11 @@
     @media screen and (min-width: $device-2k)
       max-width: "calc(55vw - %s)" % $sidebar
     margin: auto
-    ~.l_side
+
+    ~ .l_side
       display: none
   float: left
+
   .post-list
     position: relative
     margin-bottom: $gap
@@ -65,7 +75,9 @@
     //   margin: 0
 
     &.multiple-columns
-      columns: 320px // 支持多列
+      columns: 320px
+
+  // 支持多列
 
 
   .post-wrapper
@@ -74,14 +86,16 @@
 
   .widget
     .content
-      p,ul,ol,table,.tabs,details
+      p, ul, ol, table, .tabs, details
         margin-top: $gap-p
         margin-bottom: $gap-p
+
       .post
         padding-top: 0
         padding-bottom: 0
         margin-top: $gap-p
         margin-bottom: $gap-p
+
     &.grid .content .grid.fixed a
       width: "calc(100%/8 - 0 * %s)" % $gap
       @media screen and (max-width: $device-laptop)
@@ -96,38 +110,43 @@
         width: "calc(100%/3 - 0 * %s)" % $gap
 
 
-
-
   .post
     position: relative
     margin-bottom: $gap
     padding: 1.5 * $gap
     border-radius: $border-card
+
     h1.title
       font-size: $fontsize-h1
       margin: 0
       border-bottom: none
       padding-bottom: 4px
       border-bottom: none
+
     .article-meta
       color: var(--color-meta)
       margin-bottom: $gap
       line-height: normal
+
       &#top
         margin-top: 1 * $gap
         margin-bottom: 2 * $gap
+
       &#bottom
         margin-top: 2 * $gap
         margin-bottom: 0.5 * $gap
-      .aplayer,.aplayer-pic,.thumbnail
+
+      .aplayer, .aplayer-pic, .thumbnail
         width: 48px
         height: 48px
-      .aplayer,.thumbnail
+
+      .aplayer, .thumbnail
         trans()
         border-radius: 100%
         float: right
         margin: 2px
         box-shadow: $boxshadow-card
+
         &:hover
           border-radius: 25%
           transform: scale(1.1)
@@ -137,16 +156,17 @@
             border-radius: 100%
             transform: scale(1)
             box-shadow: $boxshadow-card
+
       .thumbnail
         width: auto
         border-radius: 4px
         box-shadow: none
         trans()
+
         &:hover
           border-radius: 4px
           transform: scale(1.1) rotate(4deg)
           box-shadow: none
-
 
 
       .new-meta-box
@@ -156,52 +176,68 @@
         flex-wrap: wrap
         -webkit-font-smoothing: auto
         -moz-osx-font-smoothing: auto
-        &,p,i
+
+        &, p, i
           font-size: $fontsize-code
+
         .new-meta-item
           color: var(--color-meta)
+
           .notlink
             cursor: default
+
             &:hover
               color: var(--color-meta)
+
               p
                 color: var(--color-meta)
           display: flex
           align-items: baseline
           justify-content: center
           margin: 0 $gap 0 0
+
           &:last-child
             margin-right: 0
-          img,i
+
+          img, i
             display: inline
+
           i
             margin-right: 4px
             border-radius: 0
+
             &.fa-hashtag
               margin-right: 2px
-          p,a
+
+          p, a
             color: var(--color-meta)
             padding: 3px 0
+
           a
             display: flex
             justify-content: center
             align-items: center
+
             img
               height: 16px
               width: 16px
               margin-right: 5px
+
             p
               margin: 0
               font-weight: normal
               trans()
+
             &:hover
               color: $color-hover
+
               p
                 color: $color-hover
 
         .author
-          img,i
+          img, i
             border-radius: 100%
+
           img
             transform: translateY(-0.5px)
 
@@ -218,9 +254,11 @@
           justify-content: center
           margin: 0
           padding: 0 2px
+
           a
             padding: 0
             margin: 0 1px
+
             img
               margin: 2px
               height: 24px
@@ -229,6 +267,7 @@
                 margin: 8px
               width: auto
               background: transparent
+
           div.hoverbox
             div.target
               display: none
@@ -240,6 +279,7 @@
               left: 50%
               top: -20px
               transform: translate(-50%, -100%)
+
               img
                 display: block
                 margin: 0
@@ -247,6 +287,7 @@
                 height: 128px
                 width: 128px
                 min-width: 128px
+
             &:hover
               div.target
                 display: flex
@@ -254,7 +295,7 @@
               div.target
                 position: absolute
 
-    span>img
+    span > img
       display: inline-block
 
     a
@@ -262,13 +303,10 @@
         display: inline
 
 
-
-  @media screen and (max-width:$device-tablet)
+  @media screen and (max-width: $device-tablet)
     padding-right: 0
     @media screen and (max-width: $device-mobile)
       width: 100%
-
-
 
 
 .body-wrapper
@@ -284,8 +322,6 @@
   align-items: stretch
 
 
-
-
 article#comments
   p[ct]
     margin-top: 0
@@ -293,15 +329,19 @@ article#comments
     font-size: $fontsize-h4
     color: var(--color-text)
     font-weight: 600
+
   p[cst]
     margin-top: $gap-p
     margin-bottom: $gap-p
     font-size: $fontsize-meta
+
   #load-btns, #loading-comments
     text-align: center
     margin: $gap 0
-    &,a,i
+
+    &, a, i
       line-height: 3em
+
     a.load-comments
       display: inline-block
       border-radius: 2px
@@ -310,6 +350,7 @@ article#comments
       color: $color-inner
       padding-left: $gap * 3
       padding-right: $gap * 3
+
       &:hover
         background: $color-hover
 
@@ -322,10 +363,13 @@ if hexo-config('plugins.scrollreveal.enable')
 
 img
   max-width 100%
+
   &.lazyload:not(.placeholder)
     transition opacity .5s ease-out 0s
+
     &:not(.loaded)
       opacity: 0
+
     &.loaded
       opacity: 1
     if hexo-config('plugins.lazyload.blurIn') == true

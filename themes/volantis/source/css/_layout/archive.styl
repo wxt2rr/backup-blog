@@ -1,9 +1,11 @@
 article
-  &#arc,&#cat,&#tag
+  &#arc, &#cat, &#tag
     padding-top: $gap * 3
     padding-bottom: $gap * 3
+
     h2
       font-weight: 600
+
       &:first-child
         margin-top: 0
 
@@ -12,9 +14,11 @@ article
 article#arc
   margin-bottom: $gap * 2
   padding-bottom: $gap * 4
+
   .timenode
-    &:before,&:after
+    &:before, &:after
       margin-left: 12px
+
     .meta
       padding: 6px 0
       line-height: 1.5
@@ -25,34 +29,46 @@ article#arc
       font-weight: 500
       border-radius: 2px
       color: var(--color-list)
+
       &:before
         display: none
+
       &:after
         margin-left: 14px
+
       &:hover
         color: var(--color-p)
         background: var(--color-site-bg)
+
       time
         color: var(--color-meta)
         margin-left: $gap * 0.25 + 30px
         margin-right: $gap * 0.25
         flex-shrink: 0
         width: 60px
+
       i
         line-height: 1.5
         color: $color-hover
+
         &.red
           color: $color-mac-red
+
         &.green
           color: $color-mac-green
+
         &.yellow
           color: $color-mac-yellow
+
         &.blue
           color: $color-mac-cyan
+
         &.theme
           color: $color-theme
+
         &.accent
           color: $color-hover
+
         &.orange
           color: $color-md-deep-orange
 
@@ -67,8 +83,10 @@ article#cat
       color: var(--color-list)
       font-size: $fontsize-list
       font-weight: 500
+
       &:hover
         list_hover()
+
       &.child
         padding-left: 3 * $gap
 
@@ -81,11 +99,13 @@ article#tag
     justify-content: flex-start
     align-items: baseline
     text-align: center
+
     ul
       margin: 0 -8px
       padding: 0
       display: flex
       flex-wrap: wrap
+
       li
         list-style: none
         margin: 8px
@@ -94,15 +114,18 @@ article#tag
         display: flex
         position: relative
         font-size: $fontsize-list
+
         a
           display: inline-block
           color: var(--color-list)
           padding: 4px 52px 4px 16px
           background: var(--color-block)
           font-weight: 500
+
           &:hover
             background: $color-hover
             color: $color-inner
+
         span
           &:before
             content: 'x'

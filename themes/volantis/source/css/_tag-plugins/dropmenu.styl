@@ -6,17 +6,22 @@ div.dropmenu
   display: inline-block
   trans()
   color: $color-link
+
   &:hover
     color: inherit
-    >ul
+
+    > ul
       display: block
       left: 0
       margin-left: 0
       margin-top: 0px
-  ul>li
+
+  ul > li
     list-style: none
-    >a
+
+    > a
       &:hover
         text-decoration: none !important
+
   .list-v .list-v
     left: "calc(100% - 0.5 * %s)" % $gap

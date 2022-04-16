@@ -17,13 +17,15 @@
     width: 100%
   color: var(--color-p)
   border-radius: $border-card
+
   &:hover
     box-shadow: $boxshadow-float, $boxshadow-card-float
 
 
 .md .link-card
-  div.left,div.right
+  div.left, div.right
     pointer-events: none
+
   div.left
     width: 54px
     height: 54px
@@ -31,10 +33,12 @@
     overflow: hidden
     flex-shrink: 0
     position: relative
+
     i
       font-size: 32px
       line-height: 48px
       margin-left: 4px
+
     img
       display: block
       position: absolute
@@ -42,14 +46,18 @@
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
+
   div.right
     overflow: hidden
     margin-right: 16px
+
   p
     margin: 0
     txt-ellipsis()
+
   p.text
     font-weight: bold
+
   p.url
     flex-shrink: 0
     color: var(--color-meta)
@@ -61,7 +69,9 @@
   @media screen and (max-width: $device-mobile-l * 2)
     grid-template-columns: 1fr
   grid-gap: $gap
+
   .tag.link
     margin: 0
+
   .link-card
     width: 100%

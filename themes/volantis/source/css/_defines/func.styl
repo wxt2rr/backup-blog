@@ -1,5 +1,3 @@
-
-
 trans($time = 0.28s)
   transition: all $time ease
   -moz-transition: all $time ease
@@ -10,7 +8,7 @@ trans($time = 0.28s)
 hoverable-card()
   trans()
   &:hover
-    box-shadow: 0 0 4px rgba(0,0,0,.1), 0 0 8px rgba(0,0,0,.08)
+    box-shadow: 0 0 4px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .08)
 
 txt-ellipsis()
   white-space: nowrap
@@ -22,10 +20,12 @@ placeholder(rules)
     rules()
   &:-moz-placeholder
     rules()
-	&::-moz-placeholder
-    rules()
-	&:-ms-input-placeholder
-    rules()
+
+&::-moz-placeholder
+  rules()
+
+&:-ms-input-placeholder
+  rules()
 
 disable-user-select()
   -moz-user-select: none
@@ -43,6 +43,7 @@ scrollbar($w = 4px, $b = 2px, $c = $color-theme, $h = $color-hover)
     background: $c
     cursor: pointer
     border-radius: $b
+
     &:hover
       background: $h
 
@@ -60,6 +61,7 @@ scrollbar-codeblock()
   &:hover
     &::-webkit-scrollbar-thumb
       background: alpha($color-text, .5)
+
       &:hover
         background: $color-hover
 

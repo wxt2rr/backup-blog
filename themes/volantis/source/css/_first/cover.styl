@@ -18,15 +18,18 @@
   position: relative
   overflow: hidden
   margin-bottom: -100px
-  .cover-bg,#cover-backstretch
+
+  .cover-bg, #cover-backstretch
     position: absolute
     width: 100%
     height: 100%
     background-position: center
     background-size: cover
+
     &.lazyload
       &:not(.loaded)
         opacity: 0
+
       &.loaded
         animation-delay: 0s
         animation-duration: .5s
@@ -46,9 +49,11 @@
     position: relative
     width: 100%
     height: 100%
+
   &#full
     height: "calc(%s + 100px)" % 100vh
     padding-bottom: 100px
+
   &#half
     max-height: 640px
     min-height: 400px
@@ -61,6 +66,7 @@
     bottom: 100px
     text-align: center
     cursor: pointer
+
     .scroll-down-effects
       color: white
       font-size: 24px
@@ -85,31 +91,39 @@
 .cover-wrapper .cover-body
   margin-top: $navbar-height
   margin-bottom: 100px
-  &,.top,.bottom
+
+  &, .top, .bottom
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
     max-width: 100%
+
   .bottom
     margin-top: $gap * 2
+
   .title
     font-family: $fontfamily-logo
     font-size: $fontsize-large * 1.25
     line-height: 1.2
     text-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+
   .subtitle
     font-size: $fontsize-root * 1.25
+
   .logo
     max-height: 120px
     max-width: "calc(100% - 4 * %s)" % $gap
   @media screen and (min-height: 1024px)
     .title
       font-size: $fontsize-large * 1.2
+
     .subtitle
       font-size: $fontsize-meta * 1.2
+
     .logo
       max-height: 150px
+
   .m_search
     $iconW = 32px
     $iconMargin = 4px
@@ -117,20 +131,24 @@
     max-width: "calc(100% - %s)" % 16px
     width: 320px
     vertical-align: middle
+
     .form
       position: relative
       display: block
       width: 100%
-    .icon,.input
+
+    .icon, .input
       trans()
+
     .icon
       position: absolute
-      display:block
+      display: block
       line-height: 2.5rem
       width: $iconW
       top: 0
-      left: $iconMargin+1px
+      left: $iconMargin+ 1px
       color: alpha($color-p, .75)
+
     .input
       display: block
       height: 2.5rem
@@ -147,8 +165,10 @@
       backdrop-filter: blur(10px)
       border: none
       color: var(--color-text)
+
       &:hover
         background: alpha($color-card, .8)
+
       &:focus
         background: alpha($color-card, 1)
 
@@ -160,10 +180,12 @@
   align-items: stretch
   border-radius: $border-button
   disable-user-select()
+
   a
     flex: 1
     display: flex
     font-weight: 600
+
     img
       display: block
       border-radius: 2px
@@ -184,8 +206,10 @@
 
 .cover-wrapper
   max-width: 100%
+
   &.search .bottom .menu
     margin-top: $gap
+
     .list-h a
       white-space: nowrap
       flex-direction: row
@@ -196,15 +220,20 @@
       opacity: .75
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05)
       border-bottom: 2px solid transparent
+
       i
         margin-right: 4px
+
       p
         font-size: $fontsize-list
+
       &:hover, &.active, &:active
         opacity: 1
         border-bottom: 2px solid var(--color-site-inner)
+
   &.dock .menu, &.featured .menu, &.focus .menu
     border-radius: $border-button + 2px
+
     .list-h a
       flex-direction: column
       align-items: center
@@ -218,32 +247,40 @@
       align-content: flex-end
       color: alpha($color-text, .7)
       font-size: 1.5rem
+
       i
         margin: $gap * 0.5
+
       p
         font-size: $fontsize-meta
+
       &.active
-        i, i+p
+        i, i + p
           color: $color-theme
-        img+p
+
+        img + p
           color: var(--color-text)
         background: var(--color-card)
         backdrop-filter: none
+
       &:hover
         background: var(--color-card)
 
 
 .cover-wrapper.dock .top
   margin-bottom: $gap * 3
+
 .cover-wrapper.dock .menu
   background: alpha($color-card, .5)
   position: absolute
   bottom: 0
   max-width: 100%
+
   .list-h
     flex-wrap: nowrap
     margin: 4px
-    a+a
+
+    a + a
       margin-left: 4px
     @media screen and (max-width: $device-mobile)
       overflow-x: scroll
@@ -255,6 +292,7 @@
 .cover-wrapper.featured .menu
   .list-h
     margin: -2px
+
   .list-h a
     margin: 2px
     background: alpha($color-card, .5)
@@ -266,13 +304,16 @@
   .list-h
     margin: 2px
   trans()
+
   &:hover
     background: alpha($color-card, .5)
     @supports (backdrop-filter: blur(20px))
       background: alpha($color-card, .5)
       backdrop-filter: saturate(200%) blur(20px)
+
   .list-h a
     margin: 2px
+
     &:hover
       opacity: 1
       background: var(--color-card)

@@ -1,18 +1,17 @@
 ---
-hide: false
-title: 【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常
-date: 2020-11-04 22:25:00
-summary: 【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常
-categories: 踩坑系列
-tags:
-  - Arrays
-  - 视图
-  - 踩坑
+hide: false title: 【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常 date: 2020-11-04 22:25:00 summary:
+【踩坑系列】Arrays$asList()抛UnsupportedOperationException异常 categories: 踩坑系列 tags:
+
+- Arrays
+- 视图
+- 踩坑
+
 ---
 
 > 今天写代码时遇到一个很奇怪的问题，我很主观的利用Arrays,asList()方法返回一个List，然后对该List进行了add()方法的调用，结果竟然抛了异常。
 
 **示例代码：**
+
 ~~~java
 @org.junit.Test
 public void test(){
@@ -22,7 +21,9 @@ public void test(){
     System.out.println(list);
 }
 ~~~
+
 **报错如下：**
+
 ~~~java
 java.lang.UnsupportedOperationException
 	at java.util.AbstractList.add(AbstractList.java:148)
@@ -51,8 +52,11 @@ java.lang.UnsupportedOperationException
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:221)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
 ~~~
-####  1.接下来我们看下源码，排查异常产生的原因
+
+#### 1.接下来我们看下源码，排查异常产生的原因
+
 我们点进asList()方法看下源码是怎么实现的。
+
 ~~~java
 @SafeVarargs
 @SuppressWarnings("varargs")
@@ -60,7 +64,9 @@ public static <T> List<T> asList(T... a) {
     return new ArrayList<>(a);
 }
 ~~~
+
 这里发现这不是返回的就是一个new出来的ArrayList集合对象吗，没有什么问题啊，别着急，我们在进到ArrayList看看猫腻。
+
 ~~~java
 /**
      * @serial include
@@ -158,7 +164,9 @@ public static <T> List<T> asList(T... a) {
         }
     }
 ~~~
+
 这时我们发现，此ArrayList并不是我们常用的java.util包下的，而是Arrays类自己实现的一个静态内部类，该内部类继承了AbstractList抽象类，我们知道AbstractList是实现了List接口的，而AbstractList本身也是一个抽象类，并没有对add等方法进行实现，Arrays$ArrayList虽然继承了AbstractList，但是也没有对add等方法进行实现，所以当我们调用该内部类的add方法时就抛出UnsupportedOperationException异常。
+
 ~~~java
 // 1.首先我们看ArrayList继承了AbstractList
 private static class ArrayList<E> extends AbstractList<E>
@@ -182,8 +190,11 @@ public boolean add(E e) {
     return true;
 }
 ~~~
+
 #### 2.问题我们找到了，接下来我们想一想为什么Arrays要自己实现一个ArrayList呢
+
 我们先看下源码注释是怎么说的（摘自于asList方法注释）
+
 ~~~java
 /**
   * Returns a fixed-size list backed by the specified array.  (Changes to
@@ -204,11 +215,17 @@ public boolean add(E e) {
   * 指定数组的列表视图
   */
 ~~~
-* **asList方法返回的是当前数组的的列表视图**，当我们改变原始数组的数据时，这个"视图"会自然而然的同步改变，因为它就是当前数组的一个展现形式，如果返回的是java.util包下的ArrayList，无疑会创建一个新的数组来代替当前数组，并且我们新的数据进行修改，原数组的数据也不会发生改变。
+
+* **asList方法返回的是当前数组的的列表视图**，当我们改变原始数组的数据时，这个"视图"
+  会自然而然的同步改变，因为它就是当前数组的一个展现形式，如果返回的是java.util包下的ArrayList，无疑会创建一个新的数组来代替当前数组，并且我们新的数据进行修改，原数组的数据也不会发生改变。
 * **asList方法返回的是一个固定大小列表**，也就是说只要数组创建了，我们无法向数组中添加新的元素，只能对现有元素进行替换和查找，并且不能删除元素。这个java.util包下的ArrayList也是无法做到的。
 * **此方法充当基于数组的API和基于集合的API之间的桥梁**，这句话也体现了，asList方法本身就不是一个真正意义上的集合方法，只是在基于两者的API基础上做了一个衔接。
+
 #### 3.总结
-Arrays$asList()本身并没有创建和返回一个新的集合对象，返回的仍然是描述原数组的视图，也就是该"集合"只满足对数组的操作，一但声明集合大小不能修改、不能直接删除某个元素等等；也就是说当我们通过asList方法将数组转成集合之后，我们对该集合的操作仅仅满足于对一个数组的操作，那么我们是可以使用这个方法的，如果想要得到的集合满足于一个真实集合对象的使用，那么这个方法是不适用的，我们这时候需要将数组复制到一个新的数组支持集合的创建，比如
+
+Arrays$asList()本身并没有创建和返回一个新的集合对象，返回的仍然是描述原数组的视图，也就是该"集合"
+只满足对数组的操作，一但声明集合大小不能修改、不能直接删除某个元素等等；也就是说当我们通过asList方法将数组转成集合之后，我们对该集合的操作仅仅满足于对一个数组的操作，那么我们是可以使用这个方法的，如果想要得到的集合满足于一个真实集合对象的使用，那么这个方法是不适用的，我们这时候需要将数组复制到一个新的数组支持集合的创建，比如
+
 ~~~java
 @org.junit.Test
 public void test(){

@@ -2,15 +2,20 @@
   font-weight: 500
   margin-bottom: $gap * 0.75
   line-height: 1.4
+
   a
     color: var(--color-h1)
+
     &:hover
       color: $color-hover
+
   &[pin]
     margin-right: 36px
+
 .post-v3
   overflow: hidden
   text-align: justify
+
   .md
     color: var(--color-p)
 
@@ -26,8 +31,10 @@
 
 .meta-v3[line_style='solid']
   border-top: 1px solid alpha($color-text, 0.1)
+
 .meta-v3[line_style='dashed']
   border-top: 2px dashed alpha($color-text, 0.1)
+
 .meta-v3[line_style='dotted']
   border-top: 4px dotted alpha($color-text, 0.1)
 
@@ -38,24 +45,31 @@
   flex-wrap: wrap
   justify-content: space-between
   color: var(--color-meta)
-  >div
+
+  > div
     display: flex
     align-items: center
     user-select: none
+
   time
     font-size: $fontsize-meta
+
   .category-link
     font-size: $fontsize-meta
     color: var(--color-meta)
     -webkit-font-smoothing: auto
     -moz-osx-font-smoothing: auto
+
     &:hover
       color: $color-hover
+
   .readmore
     font-weight: bold
+
   .avatar
     line-height: 0
     margin-right: .75em
+
     img
       width: 24px
       height: 24px
@@ -69,6 +83,7 @@
   margin-top: 0 - 1.5 * $gap
   margin-bottom: 1.25 * $gap
   width: "calc(100% + 3 * %s)" % $gap
+
   .headimg-a
     display: block
     overflow: hidden
@@ -79,16 +94,21 @@
       height: 220px
     @media screen and (max-width: $device-mobile-l)
       height: 190px
+
   .headimg
     object-fit: cover
     width: 100%
     height: 100%
     transition transform 3s ease-out
+
     &:hover
       transform: scale(1.1)
+
     &.lazyload:not(.placeholder)
       transition transform 3s ease-out, opacity .5s ease-out
+
       &:not(.loaded)
         opacity: 0
+
       &.loaded
         opacity: 1

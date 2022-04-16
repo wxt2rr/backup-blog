@@ -9,11 +9,11 @@
 // {% endtable %}
 
 function postTable(args, content) {
-  let ret = '';
-  ret += '<div class="table">';
-  ret += hexo.render.renderSync({text: content, engine: 'markdown'});
-  ret += '</div>';
-  return ret;
+    let ret = '';
+    ret += '<div class="table">';
+    ret += hexo.render.renderSync({text: content, engine: 'markdown'});
+    ret += '</div>';
+    return ret;
 }
 
 hexo.extend.tag.register('table', postTable, {ends: true});

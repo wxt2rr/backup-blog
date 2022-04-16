@@ -10,7 +10,8 @@ div.tabs
   background: var(--color-card)
   border: 1px solid $border-color
   font-size: $fontsize-list
-  .highlight,p,ul,ol,div.note,details
+
+  .highlight, p, ul, ol, div.note, details
     margin-top: $gap-p
     margin-bottom: $gap-p
 
@@ -25,12 +26,15 @@ div.tabs
     background: var(--color-block)
     border-radius: $tbr $tbr 0 0
     line-height: 1.5
+
     li.tab
       list-style-type: none
       margin-top: 0
       margin-bottom: 0
+
       &:last-child
         padding-right: $gap
+
       a
         display: block
         cursor: pointer
@@ -42,10 +46,13 @@ div.tabs
         font-weight: bold
         color: var(--color-meta)
         border: 1px solid transparent
+
         &:hover
           color: var(--color-p)
+
         i
           pointer-events: none
+
       &.active a
         cursor: default
         color: var(--color-p)
@@ -56,15 +63,20 @@ div.tabs
   .tab-content
     border-top: 1px solid $border-color
     margin-top: -1px
+
     .tab-pane
       padding: $gap
+
       &:not(.active)
         display: none
+
       &.active
         display: block
+
       >
-        p,.tabs,ul,ol,.highlight,.note
-          &:first-child
-            margin-top: 0
-          &:last-child
-            margin-bottom: 0
+      p, .tabs, ul, ol, .highlight, .note
+        &:first-child
+          margin-top: 0
+
+        &:last-child
+          margin-bottom: 0

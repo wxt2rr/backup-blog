@@ -2,19 +2,24 @@ div.gallery
   margin: $gap-p 0
   overflow: hidden
   $sp = 1px
-  &+.gallery
+
+  & + .gallery
     margin-top: 0 - $gap-p
-  >.fancybox,>p>.fancybox
+
+  > .fancybox, > p > .fancybox
     margin: $sp
     padding: 0
     position: relative
+
     a
       height: 100%
       width: 100%
+
     img
       object-fit: cover
       height: 100%
       width: 100%
+
     .image-caption
       opacity: 0
       transform: translateY(100%)
@@ -26,45 +31,61 @@ div.gallery
       text-align: center
       background: rgba(0, 0, 0, 0.3)
       color: #fff
+
       &:empty
-        display:none
+        display: none
+
     &:hover
       .image-caption
         opacity: 1
         transform: translateY(0)
-  &,>p
+
+  &, > p
     display: flex
     justify-content: center
     align-items: center
     flex-wrap: nowrap
     padding: 0 !important
     align-items: stretch
-  &[col]>p
+
+  &[col] > p
     flex-wrap: wrap
     justify-content: flex-start
-  &[col='2']>p>.fancybox
+
+  &[col='2'] > p > .fancybox
     width: "calc(50% - 2 * %s)" % $sp
-  &[col='3']>p>.fancybox
+
+  &[col='3'] > p > .fancybox
     width: "calc(33.33% - 2 * %s)" % $sp
-  &[col='4']>p>.fancybox
+
+  &[col='4'] > p > .fancybox
     width: "calc(25% - 2 * %s)" % $sp
-  &[col='5']>p>.fancybox
+
+  &[col='5'] > p > .fancybox
     width: "calc(20% - 2 * %s)" % $sp
-  &[col='6']>p>.fancybox
+
+  &[col='6'] > p > .fancybox
     width: "calc(16.66% - 2 * %s)" % $sp
-  &[col='7']>p>.fancybox
+
+  &[col='7'] > p > .fancybox
     width: "calc(14.2857% - 2 * %s)" % $sp
-  &[col='8']>p>.fancybox
+
+  &[col='8'] > p > .fancybox
     width: "calc(12.5% - 2 * %s)" % $sp
-  >p
+
+  > p
     margin: 0
-  &.left,&.left>p
+
+  &.left, &.left > p
     justify-content: flex-start
-  &.center,&.center>p
+
+  &.center, &.center > p
     justify-content: center
-  &.right,&.right>p
+
+  &.right, &.right > p
     justify-content: flex-end
-  &.stretch,&.stretch>p
+
+  &.stretch, &.stretch > p
     align-items: stretch
 
 
@@ -85,17 +106,21 @@ div.fancybox
   border-radius: 2px
   @media screen and (max-width: $device-mobile)
     border-radius: 1px
+
   a
     line-height: 0
     margin: 0 auto
     align-items: stretch
     cursor: zoom-in
+
   .gallery
     overflow: hidden
+
   .image-caption
     font-size: $fontsize-code
     padding-top: $gap-p * 0.5
     padding-bottom: $gap-p
     color: var(--color-meta)
+
     &:empty
       display: none

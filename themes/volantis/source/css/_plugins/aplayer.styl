@@ -1,7 +1,7 @@
 @media screen and (max-width: $device-mobile)
   .l_header
     .list-v
-      .aplayer,.aplayer-pic
+      .aplayer, .aplayer-pic
         border-radius: $border-card * 0.5
         width: 64px
         height: 64px
@@ -10,6 +10,7 @@
   display: flex
   justify-content: center
   min-height: 100px
+
   meting-js
     max-width: 100%
 
@@ -19,6 +20,7 @@
   border-radius: 4px
   color: var(--color-text)
   font-family: $fontfamily
+
   .aplayer-list
     text-align: left
   @media screen and (max-width: $device-mobile)
@@ -26,4 +28,6 @@
 
 .l_header
   .aplayer-volume-wrap
-        display: none !important // 隐藏导航栏播放器音量调节 see: https://github.com/volantis-x/hexo-theme-volantis/issues/328
+    display: none !important
+
+// 隐藏导航栏播放器音量调节 see: https://github.com/volantis-x/hexo-theme-volantis/issues/328

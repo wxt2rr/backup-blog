@@ -1,16 +1,14 @@
 ---
-hide: false
-title: 数据库连接参数allowMultiQueries的作用
-date: 2020-09-07 09:25:00
-summary: 连接数据库时allowMultiQueries=true的作用
-categories: 数据库
-tags:
-  - Mysql
-  - 数据库
-  - 日常踩坑
+hide: false title: 数据库连接参数allowMultiQueries的作用 date: 2020-09-07 09:25:00 summary: 连接数据库时allowMultiQueries=true的作用
+categories: 数据库 tags:
+
+- Mysql
+- 数据库
+- 日常踩坑
+
 ---
 
->~~~ mysql
+> ~~~ mysql
 > <delete id="delete">
 >        <foreach collection="list" item="item" index="index" separator=";" >
 >            delete from xxxx_table

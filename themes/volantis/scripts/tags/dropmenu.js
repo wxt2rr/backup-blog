@@ -1,10 +1,10 @@
 'use strict';
 
 function postMenu(args, content) {
-  args = args.join(' ').split(',');
-  if (args.length == 1) {
-    const title = args[0].trim();
-    return `<div class='dropmenu-wrapper'>
+    args = args.join(' ').split(',');
+    if (args.length == 1) {
+        const title = args[0].trim();
+        return `<div class='dropmenu-wrapper'>
               <div class='dropmenu'>
                 <a>${title}</a>
                 <ul class='list-v'>
@@ -12,10 +12,10 @@ function postMenu(args, content) {
                 </ul>
               </div>
             </div>`;
-  } else if (args.length == 2) {
-    const prefix = args[0].trim();
-    const title = args[1].trim();
-    return `<div class='dropmenu-wrapper'>
+    } else if (args.length == 2) {
+        const prefix = args[0].trim();
+        const title = args[1].trim();
+        return `<div class='dropmenu-wrapper'>
               <span>${prefix}</span>
               <div class='dropmenu'>
                 <a>${title}</a>
@@ -24,11 +24,11 @@ function postMenu(args, content) {
                 </ul>
               </div>
             </div>`;
-  } else if (args.length == 3) {
-    const prefix = args[0].trim();
-    const title = args[1].trim();
-    const suffix = args[2].trim();
-    return `<div class='dropmenu-wrapper'>
+    } else if (args.length == 3) {
+        const prefix = args[0].trim();
+        const title = args[1].trim();
+        const suffix = args[2].trim();
+        return `<div class='dropmenu-wrapper'>
               <span>${prefix}</span>
               <div class='dropmenu'>
                 <a>${title}</a>
@@ -38,14 +38,15 @@ function postMenu(args, content) {
               </div>
               <span>${suffix}</span>
             </div>`;
-  }
+    }
 }
+
 function postSubmenu(args, content) {
-  args = args.join(' ').split(',');
-  const text = args[0] || '';
-  const icon = args[1] || '';
-  if (icon.length > 0) {
-    return `<li>
+    args = args.join(' ').split(',');
+    const text = args[0] || '';
+    const icon = args[1] || '';
+    if (icon.length > 0) {
+        return `<li>
               <a class='menuitem'>
                 <i class='${icon} fa-fw'></i>
                 ${text}
@@ -54,8 +55,8 @@ function postSubmenu(args, content) {
                 ${content}
               </ul>
             </li>`;
-  }
-  return `<li>
+    }
+    return `<li>
               <a class='menuitem'>${text}</a>
               <ul class='list-v'>
                 ${content}
@@ -65,37 +66,37 @@ function postSubmenu(args, content) {
 }
 
 function postMenuItem(args) {
-  args = args.join(' ').split(',');
-  let text = args[0] || '';
-  let url = args[1] || '';
-  text = text.trim();
-  url = url.trim();
-  if (url.length > 0) {
-    url = 'href=\'' + url + '\'';
-  }
-  let icon = '';
-  if (args.length > 2) {
-    icon = args[2].trim();
-  }
-  if (url.length > 0) {
-    if (icon.length > 0) {
-      return `<li>
+    args = args.join(' ').split(',');
+    let text = args[0] || '';
+    let url = args[1] || '';
+    text = text.trim();
+    url = url.trim();
+    if (url.length > 0) {
+        url = 'href=\'' + url + '\'';
+    }
+    let icon = '';
+    if (args.length > 2) {
+        icon = args[2].trim();
+    }
+    if (url.length > 0) {
+        if (icon.length > 0) {
+            return `<li>
                 <a class='menuitem' ${url} title='${text}'>
                   <i class='${icon} fa-fw'></i>
                   ${text}
                 </a>
               </li>`;
-    }
-    return `<li>
+        }
+        return `<li>
                 <a class='menuitem' ${url} title='${text}'>
                   ${text}
                 </a>
               </li>`;
 
-  }
-  if (text == 'hr') {
-    return '<hr>';
-  }
+    }
+    if (text == 'hr') {
+        return '<hr>';
+    }
 
 
 }

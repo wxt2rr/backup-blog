@@ -31,9 +31,10 @@ html
   height: 100%
   font-family: $fontfamily
   font-size: $fontsize-root
-  >
-    if hexo-config('custom_css.scrollbar.size')
-      scrollbar(convert(hexo-config('custom_css.scrollbar.size')), convert(hexo-config('custom_css.scrollbar.border')) || 0px)
+
+>
+if hexo-config('custom_css.scrollbar.size')
+  scrollbar(convert(hexo-config('custom_css.scrollbar.size')), convert(hexo-config('custom_css.scrollbar.border')) || 0px)
 
 body
   background-color: var(--color-site-body)
@@ -42,6 +43,7 @@ body
   line-height: $lineheight
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
+
   &.modal-active
     overflow: hidden
     @media screen and (max-width: $modal-threshold)
@@ -50,7 +52,6 @@ body
       right: 0
       bottom: 0
       left: 0
-
 
 
 ::-moz-selection {
@@ -64,18 +65,23 @@ body
 
 h1
   font-size: $fontsize-h1
+
 h2
   font-size: $fontsize-h2
+
 h3
   font-size: $fontsize-h3
+
 h4
   font-size: $fontsize-h4
+
 h5
   font-size: $fontsize-h5
+
 h6
   font-size: $fontsize-h6
 
-h1,h2,h3,h4,h6
+h1, h2, h3, h4, h6
   font-weight: normal
 
 a
@@ -83,10 +89,13 @@ a
   cursor: pointer
   text-decoration: none
   trans()
+
   &:hover
     color: $color-hover
-  &:active,&:hover
+
+  &:active, &:hover
     outline: 0
+
   &:not([href])
     cursor: default
 
@@ -99,9 +108,11 @@ pre
 
 .clearfix
   zoom: 1
-  &:before,&:after
+
+  &:before, &:after
     content: " "
     display: table
+
   &:after
     clear: both
 
@@ -115,17 +126,19 @@ pre
   width: 80%
   max-width: 710px
   margin: 0 auto
+
 .vertical
   display: table-cell
   vertical-align: middle
 
 
-ul,ol
+ul, ol
   padding-left: 0
+
   li
     list-style: none
 
-article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary
   display: block
 
 article
@@ -133,25 +146,34 @@ article
 
 abbr[title]
   border-bottom: 1px dotted
-b,strong
+
+b, strong
   font-weight: bold
+
 dfn
   font-style: italic
+
 h1
   font-size: 2em
   margin: 0.67em 0
+
 mark
   background: #ff0
   color: #000
+
 small
   font-size: 80%
-sub,sup
+
+sub, sup
   font-size: 50%
   line-height: 1em
+
 sup
   vertical-align: text-top
+
 sub
   vertical-align: text-bottom
+
 img
   border: 0
   background: none
@@ -175,28 +197,32 @@ hr
 pre
   overflow: auto
 
-span.dot,span.sep
+span.dot, span.sep
   font-size: 0.9em
   margin: 0 .2rem
+
 span.dot:before
   content: '·'
+
 span.sep:before
   content: '/'
 
-code,kbd,pre,samp
+code, kbd, pre, samp
   font-family: monospace, monospace
   font-size: 1em
 
 
-button,input,optgroup,select,textarea
+button, input, optgroup, select, textarea
   color: inherit /* 1 */
   font: inherit /* 2 */
-  margin: 0 /* 3 */
+  margin: 0
+
+/* 3 */
 
 button
   overflow: visible
 
-button,select
+button, select
   text-transform: none
 
 
@@ -205,10 +231,12 @@ html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"]
   -webkit-appearance: button /* 2 */
-  cursor: pointer /* 3 */
+  cursor: pointer
+
+/* 3 */
 
 
-button[disabled],html input[disabled]
+button[disabled], html input[disabled]
   cursor: default
 
 button::-moz-focus-inner,
@@ -220,7 +248,9 @@ input::-moz-focus-inner
 input[type="checkbox"],
 input[type="radio"]
   box-sizing: border-box /* 1 */
-  padding: 0 /* 2 */
+  padding: 0
+
+/* 2 */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button
@@ -246,7 +276,9 @@ fieldset
 
 legend
   border: 0 /* 1 */
-  padding: 0 /* 2 */
+  padding: 0
+
+/* 2 */
 
 textarea
   overflow: auto
@@ -261,20 +293,24 @@ table:not([class])
   display: inline-block
   max-width: 100%
   vertical-align: text-top
+
   th
     background-color: darken($color-block, 2)
-  td,th
+
+  td, th
     padding: 8px 16px
     border: 2px solid darken($color-block, 2)
     line-height: 1.5
     font-size: 90%
+
   tr
     word-break: keep-all
     background-color: lighten($color-block, 3)
     trans()
+
     &:hover
       background-color: darken($color-block, 2)
 
 
-td,th
+td, th
   padding: 0

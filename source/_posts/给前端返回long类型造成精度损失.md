@@ -1,12 +1,10 @@
 ---
-hide: false
-title: 给前端返回long类型造成精度损失
-date: 2021-11-07 09:25:00
-summary: 连接数据库时allowMultiQueries=true的作用
-categories: 踩坑系列
+hide: false title: 给前端返回long类型造成精度损失 date: 2021-11-07 09:25:00 summary: 连接数据库时allowMultiQueries=true的作用 categories: 踩坑系列
 tags:
-  - js
-  - 日常踩坑
+
+- js
+- 日常踩坑
+
 ---
 > 今天同事遇到一个问题，后端给前端返回一个long类型的参数，前端获取到时候造成了精度损失，记录一下
 
@@ -21,8 +19,6 @@ JS的基础类型Number，遵循 [IEEE 754](https://en.wikipedia.org/wiki/IEEE_f
 - 1位用来表示符号位
 - 11位用来表示指数
 - 52位表示尾数
-
- 
 
 浮点数，比如
 

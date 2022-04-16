@@ -208,7 +208,7 @@ custom_html: ''
 
 # 网页访问统计
 # Analysis of website visitors
-web_analytics:  # 网页访问统计
+web_analytics: # 网页访问统计
   enable: true
 
   # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
@@ -241,7 +241,7 @@ web_analytics:  # 网页访问统计
   # 友盟/cnzz 站点统计 web_id
   # cnzz analytics
   # See: https://web.umeng.com/main.php?c=site&a=show
-  cnzz: 
+  cnzz:
 
   # LeanCloud 计数统计，可用于 PV UV 展示，如果 `web_analytics: enable` 没有开启，PV UV 展示只会查询不会增加
   # LeanCloud count statistics, which can be used for PV UV display. If `web_analytics: enable` is false, PV UV display will only query and not increase
@@ -451,11 +451,11 @@ index:
 
       # 请求头
       # Request headers
-      headers: {}
+      headers: { }
 
       # 从请求结果获取字符串的取值字段，最终必须是一个字符串，例如返回结果为 {"data": {"author": "fluid", "content": "An elegant theme"}}, 则取值字段为 ['data', 'content']；如果返回是列表则自动选择第一项
       # The value field of the string obtained from the response. For example, the response content is {"data": {"author": "fluid", "content": "An elegant theme"}}, the expected `keys: ['data','content']`; if the return is a list, the first item is automatically selected
-      keys: []
+      keys: [ ]
 
   # 自动截取文章摘要
   # Auto extract post
@@ -585,7 +585,7 @@ post:
     enable: true
     # 放大后图片链接替换规则，可用于将压缩图片链接替换为原图片链接，如 ['-slim', ''] 是将链接中 `-slim` 移除；如果想使用正则请使用 `re:` 前缀，如 ['re:\\d{3,4}\\/\\d{3,4}\\/', '']
     # The image url replacement when zooming, the feature can be used to replace the compressed image to the original image, eg: ['-slim', ''] removes `-slim` from the image url when zooming; if you want to use regular, use prefix `re:`, eg: ['re:\\d{3,4}\\/\\d{3,4}\\/','']
-    img_url_replace: ['', '']
+    img_url_replace: [ '', '' ]
 
   # 脚注语法，会在文章底部生成脚注，如果 Markdown 渲染器本身支持，则建议关闭，否则可能会冲突
   # Support footnote syntax, footnotes will be generated at the bottom of the post page. If the Markdown renderer itself supports it, please disable it, otherwise it may conflict
@@ -674,9 +674,9 @@ gitalk:
   clientSecret:
   repo:
   owner:
-  admin: ['name']
+  admin: [ 'name' ]
   language: zh-CN
-  labels: ['Gitalk']
+  labels: [ 'Gitalk' ]
   perPage: 10
   pagerDirection: last
   distractionFreeMode: false
@@ -697,7 +697,7 @@ valine:
   placeholder: 来撩骚啊~
   path: window.location.pathname
   avatar: wavatar
-  meta: ['nick', 'mail']
+  meta: [ 'nick', 'mail' ]
   pageSize: 10
   lang: zh-CN
   highlight: true
@@ -706,7 +706,7 @@ valine:
   emojiCDN:
   emojiMaps:
   enableQQ: true
-  requiredFields: []
+  requiredFields: [ ]
 
 # Waline
 # 从 Valine 衍生而来，额外增加了服务端和多种功能
@@ -717,13 +717,13 @@ waline:
   placeholder: 说点什么
   path: window.location.pathname
   avatar: retro
-  meta: ['nick', 'mail', 'link']
+  meta: [ 'nick', 'mail', 'link' ]
   pageSize: 10
   lang: zh-CN
   highlight: true
   avatarCDN: ''
   avatarForce: false
-  requiredFields: []
+  requiredFields: [ ]
   emojiCDN:
   emojiMaps:
   anonymous:
@@ -752,7 +752,7 @@ remark42:
   site_id:
   max_shown_comments: 10
   locale: zh
-  components: ['embed']
+  components: [ 'embed' ]
 
 # Twikoo
 # 基于腾讯云开发
@@ -850,21 +850,21 @@ about:
     - { class: "iconfont icon-github-fill", link: "https://github.com/wxt1471520488", tip: "GitHub" }
     - { class: "iconfont icon-qq-fill",qrcode: "https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/qq.jpg" }
     - { class: "iconfont icon-wechat-fill", qrcode: "https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/wx.jpg" }
- # 评论插件
- # Comment plugin
- # 评论插件
- #   # Comment plugin
- #     comments:
- #         enable: true
- #             # 指定的插件，需要同时设置对应插件的必要参数
- #                 # The specified plugin needs to set the necessary parameters at the same time
- #                     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
- #                 
- #                 
- #
+  # 评论插件
+  # Comment plugin
+  # 评论插件
+  #   # Comment plugin
+  #     comments:
+  #         enable: true
+  #             # 指定的插件，需要同时设置对应插件的必要参数
+  #                 # The specified plugin needs to set the necessary parameters at the same time
+  #                     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis
+  #
+  #
+  #
   comments:
     enable: true
-    type: valine        
+    type: valine
 
 #---------------------------
 # 自定义页
@@ -910,16 +910,16 @@ links:
       link: "https://wangxt.online",
       avatar: "https://cdn.jsdelivr.net/gh/wxt1471520488/images@main/hexo/wx.jpg"
     }
-   # - {
-   #   title: "Fluid Docs",
-   #   intro: "主题使用指南",
-   #   link: "https://hexo.fluid-dev.com/docs/",
-   #   avatar: "/img/favicon.png"
-   # }
-   # - {
-   #   title: "Fluid Repo",
-   #   intro: "主题 GitHub 仓库",
-   #   link: "https://github.com/fluid-dev/hexo-theme-fluid",
+    # - {
+    #   title: "Fluid Docs",
+    #   intro: "主题使用指南",
+    #   link: "https://hexo.fluid-dev.com/docs/",
+    #   avatar: "/img/favicon.png"
+    # }
+    # - {
+    #   title: "Fluid Repo",
+    #   intro: "主题 GitHub 仓库",
+    #   link: "https://github.com/fluid-dev/hexo-theme-fluid",
     #  avatar: "/img/favicon.png"
     #}
 

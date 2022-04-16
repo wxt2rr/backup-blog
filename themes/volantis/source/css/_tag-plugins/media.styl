@@ -1,11 +1,13 @@
 $sp = 4px
 
-audio,video
+audio, video
   border-radius: $border-codeblock
   max-width: 100%
+
 video
   z-index: 1
   trans()
+
   &:hover
     box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.24), 0 8px 16px 0px rgba(0, 0, 0, 0.24)
 
@@ -20,7 +22,8 @@ div.videos
   justify-content: flex-start
   align-items: flex-end
   margin: $gap-p 0 - $sp
-  .video,iframe
+
+  .video, iframe
     width: 100%
     margin: $sp
 
@@ -28,23 +31,31 @@ div.videos
     border-radius: $border-codeblock
     width: 100%
     min-height: 300px
+
   &.left
     justify-content: flex-start
+
   &.center
     justify-content: center
+
   &.right
     justify-content: flex-end
+
   &.stretch
     align-items: stretch
+
   &[col='1']
-    .video,iframe
+    .video, iframe
       width: 100%
+
   &[col='2']
-    .video,iframe
+    .video, iframe
       width: "calc(50% - 2 * %s)" % $sp
+
   &[col='3']
-    .video,iframe
+    .video, iframe
       width: "calc(33.33% - 2 * %s)" % $sp
+
   &[col='4']
-    .video,iframe
+    .video, iframe
       width: "calc(25% - 2 * %s)" % $sp

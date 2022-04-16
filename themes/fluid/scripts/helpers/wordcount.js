@@ -2,7 +2,7 @@
 
 'use strict';
 
-let counter = function(content) {
+let counter = function (content) {
   content = require('hexo-util').stripHTML(content);
   const cn = (content.match(/[\u4E00-\u9FA5]/g) || []).length;
   const en = (content.replace(/[\u4E00-\u9FA5]/g, '').match(
@@ -10,13 +10,13 @@ let counter = function(content) {
   return [cn, en];
 };
 
-hexo.extend.helper.register('min2read', function(content, { cn = 300, en = 160 } = {}) {
+hexo.extend.helper.register('min2read', function (content, {cn = 300, en = 160} = {}) {
   let len = counter(content);
   let readingTime = (len[0] / cn) + (len[1] / en);
   return readingTime < 1 ? '1' : parseInt(readingTime, 10);
 });
 
-hexo.extend.helper.register('wordcount', function(content) {
+hexo.extend.helper.register('wordcount', function (content) {
   let len = counter(content);
   let count = len[0] + len[1];
   if (count < 1000) {
@@ -25,9 +25,9 @@ hexo.extend.helper.register('wordcount', function(content) {
   return (Math.round(count / 100) / 10) + 'k';
 });
 
-hexo.extend.helper.register('totalcount', function(site) {
+hexo.extend.helper.register('totalcount', function (site) {
   let count = 0;
-  site.posts.forEach(function(post) {
+  site.posts.forEach(function (post) {
     let len = counter(post.content);
     count += len[0] + len[1];
   });

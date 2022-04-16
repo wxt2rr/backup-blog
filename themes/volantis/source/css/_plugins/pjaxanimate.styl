@@ -68,7 +68,6 @@
     transform: rotate(360deg)
 
 
-
 #loading-bar-wrapper
   position: fixed
   width: 100px
@@ -79,6 +78,7 @@
   border-radius: 8px
   z-index: 2000
   background: transparent
+
   &.nprogress-custom-parent
     background: var(--color-card)
     box-shadow: $boxshadow-card
@@ -92,7 +92,8 @@
   top 0
   left 0
   z-index 999999
-  background-color rgba(250,250,250,.9)
+  background-color rgba(250, 250, 250, .9)
+
   img
     width 280px
     height 210px
@@ -115,6 +116,7 @@
   border-top-color #ff5a5a
   -webkit-animation spin 1s linear infinite
   animation spin 1s linear infinite
+
   &:before
     content ""
     position absolute
@@ -127,6 +129,7 @@
     border-top-color #5af33f
     -webkit-animation spin 3s linear infinite
     animation spin 3s linear infinite
+
   &:after
     content ""
     position absolute
@@ -149,6 +152,7 @@
     -webkit-transform: rotate(360deg)
     -ms-transform: rotate(360deg)
     transform: rotate(360deg)
+
 @keyframes spin
   0%
     -webkit-transform: rotate(0deg)

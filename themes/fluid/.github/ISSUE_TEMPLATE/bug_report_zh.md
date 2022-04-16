@@ -1,9 +1,6 @@
 ---
-name: Bug 报告
-about: 创建一份 Bug 报告帮助我们优化产品
-title: ''
-labels: ':bug: bug'
-assignees: ''
+name: Bug 报告 about: 创建一份 Bug 报告帮助我们优化产品 title: ''
+labels: ':bug: bug' assignees: ''
 ---
 
 <!-- 必读 -->
@@ -13,17 +10,21 @@ assignees: ''
 <!-- 4. 不确定是不是 BUG 的，请后退使用问题求助 -->
 
 #### 请确认
+
 - [ ] 是当前最新的 [Release 版本](https://github.com/fluid-dev/hexo-theme-fluid/releases)
-- [ ] 浏览器不属于 IE 等非主流浏览器 
+- [ ] 浏览器不属于 IE 等非主流浏览器
 - [ ] 本地 `hexo clean && hexo s`，并且清除浏览器缓存，仍可复现
 - [ ] 已经排除是其他 Hexo 插件影响
 
 #### Bug 描述
+
 <!-- 例如，当 xxx 时，xxx 功能不工作，期望是 xxx 能工作，浏览器: Chrome -->
 <!-- 如果涉及一些功能配置，最好提供 _config.yml 里相关配置项 -->
 
 #### 复现步骤
+
 该 Bug 复现步骤如下：
+
 1. 在 xxx 页面点击 xxx 按钮
 2. 然后向下滚动
 3. 会出现 xxx

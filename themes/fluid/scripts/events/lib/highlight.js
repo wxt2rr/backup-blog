@@ -14,9 +14,9 @@ module.exports = (hexo) => {
       enable: false
     });
     hexo.config.highlight = objUtil.merge({}, hexo.config.highlight, {
-      enable     : true,
-      hljs       : true,
-      wrap       : false,
+      enable: true,
+      hljs: true,
+      wrap: false,
       auto_detect: true,
       line_number: config.code.highlight.line_number || false
     });
@@ -56,8 +56,8 @@ module.exports = (hexo) => {
       enable: false
     });
     hexo.config.prismjs = objUtil.merge({}, hexo.config.prismjs, {
-      enable     : true,
-      preprocess : config.code.highlight.prismjs.preprocess || false,
+      enable: true,
+      preprocess: config.code.highlight.prismjs.preprocess || false,
       line_number: config.code.highlight.line_number || false
     });
 

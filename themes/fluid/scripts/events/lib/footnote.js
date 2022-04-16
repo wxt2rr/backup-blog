@@ -4,7 +4,7 @@
 module.exports = (hexo) => {
   const config = hexo.theme.config;
   if (config.post.footnote.enable) {
-    hexo.extend.filter.register('before_post_render', function(page) {
+    hexo.extend.filter.register('before_post_render', function (page) {
       page.content = renderFootnotes(page.content, page.footnote);
       return page;
     });
@@ -26,9 +26,9 @@ module.exports = (hexo) => {
     let html = '';
 
     // threat all inline footnotes
-    text = text.replace(reInlineFootnote, function(match, index, content) {
+    text = text.replace(reInlineFootnote, function (match, index, content) {
       footnotes.push({
-        index  : index,
+        index: index,
         content: content
       });
       // remove content of inline footnote
@@ -36,9 +36,9 @@ module.exports = (hexo) => {
     });
 
     // threat all footnote contents
-    text = text.replace(reFootnoteContent, function(match, index, content) {
+    text = text.replace(reFootnoteContent, function (match, index, content) {
       footnotes.push({
-        index  : index,
+        index: index,
         content: content
       });
       // remove footnote content
@@ -55,16 +55,17 @@ module.exports = (hexo) => {
       }
       return map;
     }
+
     const indexMap = createLookMap('index');
 
     // render (HTML) footnotes reference
     text = text.replace(reFootnoteIndex,
-      function(match, index) {
+      function (match, index) {
         if (!indexMap[index]) {
           return match;
         }
         let tooltip = indexMap[index].content;
-        tooltip = hexo.render.renderSync({ text: tooltip, engine: 'markdown' });
+        tooltip = hexo.render.renderSync({text: tooltip, engine: 'markdown'});
         tooltip = tooltip.replace(/(<.+?>)/g, '');
         return '<sup id="fnref:' + index + '" class="footnote-ref">'
           + '<a href="#fn:' + index + '" rel="footnote">'
@@ -74,15 +75,15 @@ module.exports = (hexo) => {
       });
 
     // sort footnotes by their index
-    footnotes.sort(function(a, b) {
+    footnotes.sort(function (a, b) {
       return a.index - b.index;
     });
 
     // render footnotes (HTML)
-    footnotes.forEach(function(footNote) {
+    footnotes.forEach(function (footNote) {
       html += '<li><span id="fn:' + footNote.index + '" class="footnote-text">';
       html += '<span>';
-      const fn = hexo.render.renderSync({ text: footNote.content.trim(), engine: 'markdown' });
+      const fn = hexo.render.renderSync({text: footNote.content.trim(), engine: 'markdown'});
       html += fn.replace(/(<p>)|(<\/p>)/g, '');
       html += '<a href="#fnref:' + footNote.index + '" rev="footnote" class="footnote-backref"> ↩</a></span></span></li>';
     });

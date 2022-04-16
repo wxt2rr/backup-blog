@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const objUtil = require('../../utils/object');
-const { isNotEmptyObject } = require('../../utils/object');
+const {isNotEmptyObject} = require('../../utils/object');
 
 module.exports = (hexo) => {
   const isZh = hexo.theme.i18n.languages[0].search(/zh-CN/i) !== -1;
